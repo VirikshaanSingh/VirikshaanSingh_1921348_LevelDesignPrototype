@@ -6,6 +6,8 @@ TagManager:
   tags:
   - NPC
   - Pickup
+  - WeakWall
+  - Portal
   layers:
   - Default
   - TransparentFX

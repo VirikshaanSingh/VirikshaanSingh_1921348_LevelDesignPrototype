@@ -1,22 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PickUp : MonoBehaviour
 {
-    public Text circleCounter;
-    public int circlesCollected;
     public bool interactable;
+    public PickUpCounter pickUpCounter;
 
     void Start()
     {
         interactable = false;
-        circlesCollected = 0;
-        circleCounter.text = ": " + circlesCollected.ToString();
     }
 
-    void Update()
+    private void Update()
     {
         if (interactable && Input.GetKeyDown(KeyCode.E))
         {
@@ -40,10 +34,9 @@ public class PickUp : MonoBehaviour
         }
     }
 
-    private void PickUpObject()
+    public void PickUpObject()
     {
+        pickUpCounter.keysCollected += 1;
         Destroy(gameObject);
-        circlesCollected += 1;
-        circleCounter.text = ": " + circlesCollected.ToString();
     }
 }
