@@ -65,7 +65,7 @@ public class CombatTracker : MonoBehaviour
         bool isDead = enemyStats.AttackDamage(playerStats.damage);
         enemyHud.SetHp(enemyStats.hpCurrent);
         trackerText.text = "You deal " + playerStats.damage.ToString() + " damage!";
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
 
         if (isDead)
         {
@@ -98,7 +98,7 @@ public class CombatTracker : MonoBehaviour
         bool isDead = playerStats.AttackDamage(enemyStats.damage);
         playerHud.SetHp(playerStats.hpCurrent);
         trackerText.text = "The Enemy deals " + enemyStats.damage.ToString() + " damage!";
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
 
         if (isDead)
         {
@@ -140,7 +140,7 @@ public class CombatTracker : MonoBehaviour
     IEnumerator NoMP()
     {
         trackerText.text = "You don't have any MP left...";
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         combatState = CombatSystem.EnemyTurn;
         StartCoroutine(EnemyTurn());
     }

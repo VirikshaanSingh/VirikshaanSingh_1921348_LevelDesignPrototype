@@ -9,7 +9,6 @@ public class PortalController : MonoBehaviour
         if (collision.gameObject.tag.Equals("Player"))
         {
             StartCoroutine(CombatTransition());
-            Time.timeScale = 0;
         }
     }
 
