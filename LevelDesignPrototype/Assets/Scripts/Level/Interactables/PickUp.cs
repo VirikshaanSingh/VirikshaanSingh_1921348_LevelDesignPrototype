@@ -12,7 +12,7 @@ public class PickUp : MonoBehaviour
 
     private void Update()
     {
-        if (interactable && Input.GetKeyDown(KeyCode.E))
+        if (interactable && Input.GetKeyDown(KeyCode.Mouse0))
         {
             PickUpObject();
         }
