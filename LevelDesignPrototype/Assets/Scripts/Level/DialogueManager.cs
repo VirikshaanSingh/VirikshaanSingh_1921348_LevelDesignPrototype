@@ -37,7 +37,7 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = sentence;
     }
 
-    void EndDialogue()
+    public void EndDialogue()
     {
         dialogueBox.SetActive(false);
     }
